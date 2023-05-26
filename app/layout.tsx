@@ -1,6 +1,6 @@
 import './globals.css'
 import Navbar from './Navbar'
-import { Mulish } from '@next/font/google'
+import { Mulish } from "next/font/google"
 
 export const metadata = {
   title: 'eportfolio',
