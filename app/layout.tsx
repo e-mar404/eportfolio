@@ -1,10 +1,19 @@
-import Navbar from './Navbar'
 import './globals.css'
+import Navbar from './Navbar'
+import { Mulish } from '@next/font/google'
 
 export const metadata = {
   title: 'eportfolio',
   description: 'Portfolio by Emilio Marin',
 }
+
+const mulish = Mulish(
+  {
+    subsets: ['latin'],
+    weight: '400',
+    style: 'normal' 
+  }
+)
 
 export default function RootLayout({
   children,
@@ -13,7 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <body className={mulish.className}>
         <Navbar />
         {children}
       </body>
