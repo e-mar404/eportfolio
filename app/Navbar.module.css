@@ -4,14 +4,20 @@
     align-items: center;
     width: 100vw;
     height: 100px;
-    background-color: #292929;
 }
 
 .links_container{
     margin: 0 0 0 1rem;
 }
 
-.links_container a{
+.active_link{
+    color: #ACE1AF;
+    text-decoration: none;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.inactive_link{
     color: white;
     text-decoration: none;
     padding-left: 1.5rem;
