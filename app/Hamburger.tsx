@@ -16,7 +16,7 @@ export default function Hamburger(){
     }
 
     return(
-        <>
+        <div className={styles.hamburger}>
             <div className={styles.hamburger_container}
                 onClick={clickEvent}>
                 <div className={styles.bun}></div>
@@ -47,6 +47,6 @@ export default function Hamburger(){
                     </a>
                 </div>
             </div>: null}
-        </>
+        </div>
     );
 }
