@@ -1,17 +1,29 @@
 'use client';
 
 import Image from 'next/image';
-import styles from './Navbar.module.css'
+import { useState } from 'react';
+import styles from './Hamburger.module.css'
 import github_logo from './github_logo.webp';
 import { usePathname } from 'next/navigation';
 import linkedin_logo from './linkedin_logo.webp'
 
-export default function Navbar() {
+export default function Hamburger(){
+    const [open, setOpen] = useState(false)
     const path = usePathname();
+    const clickEvent = (e:any) => {
+        e.preventDefault();
+        setOpen(!open);
+    }
 
     return(
         <>
-            <div className={styles.navbar}>
+            <div className={styles.hamburger_container}
+                onClick={clickEvent}>
+                <div className={styles.bun}></div>
+                <div className={styles.bun}></div>
+                <div className={styles.bun}></div>
+            </div>
+            {open ? <div className={styles.hamburger_menu}>
                 <div className={styles.links_container}>
                     <a href='/' className={path == '/' ? styles.active_link : styles.inactive_link}>Home</a>
                     <a href='/about' className={path.startsWith('/about') ? styles.active_link : styles.inactive_link}>About</a>
@@ -34,7 +46,7 @@ export default function Navbar() {
                             height={80} />
                     </a>
                 </div>
-            </div>
+            </div>: null}
         </>
     );
 }

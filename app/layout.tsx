@@ -1,4 +1,5 @@
 import './globals.css'
+import Hamburger from './Hamburger'
 import Navbar from './Navbar'
 import { Mulish } from "next/font/google"
 
@@ -24,6 +25,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={mulish.className}>
         <Navbar />
+        <Hamburger />
         {children}
       </body>
     </html>
