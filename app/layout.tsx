@@ -1,6 +1,7 @@
 import './globals.css'
+import Hamburger from './Hamburger'
 import Navbar from './Navbar'
-import { Mulish } from '@next/font/google'
+import { Mulish } from "next/font/google"
 
 export const metadata = {
   title: 'eportfolio',
@@ -24,6 +25,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={mulish.className}>
         <Navbar />
+        <Hamburger />
         {children}
       </body>
     </html>
