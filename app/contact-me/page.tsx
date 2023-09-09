@@ -1,6 +1,7 @@
 'use client';
 
 import { FormEvent, useState } from 'react';
+import { sendEmail } from './SendEmail';
 import styles from './page.module.css'
 
 export default function Home() {
@@ -8,24 +9,32 @@ export default function Home() {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
-    const [popup, setPopup] = useState(false);
+    const [sentPopup, setSentPopup] = useState(false);
+    const [notSentPopup, setNotSentPopup] = useState(false);
 
-    const submit = (e: FormEvent) => {
+
+    const submit = async (e: FormEvent) => {
         e.preventDefault();
 
         console.log('Name: ', name);
         console.log('Email: ', email);
         console.log('Message:', message);
         
-        setPopup(true);
+        const emailVerification = await sendEmail({name, email, message});
+        if (emailVerification){
+            setSentPopup(true);
+        }else{
+            setNotSentPopup(true);
+        }
 
         setName('');
         setEmail('');
         setMessage('');
 
         setTimeout(() => {
-            setPopup(false);
-        }, 5000);
+            setSentPopup(false);
+            setNotSentPopup(false);
+        }, 10000);
     };
 
     
@@ -70,10 +79,17 @@ export default function Home() {
                 <button className={styles.button} type="submit">Submit</button>
             </form>
 
-            {popup && (
-                <div className={styles.popup}>
-                    <p>Message Sent Successfully</p>
-                    <button onClick={() => setPopup(false)}>Close</button>
+            {sentPopup && (
+                <div className={styles.sentPopup}>
+                    <p>Message sent successfully</p>
+                    <button onClick={() => setSentPopup(false)}>Close</button>
+                </div>
+            )}
+
+            {notSentPopup && (
+                <div className={styles.notSentPopup}>
+                    <p>There was an error sending the message</p>
+                    <button onClick={() => setNotSentPopup(false)}>Close</button>
                 </div>
             )}
         </>

@@ -51,12 +51,12 @@
   background-color: #0056b3;
 }
 
-.popup {
+.sentPopup {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  background-color: #007bff;
+  background-color: #00cc66;
   color: white;
   padding: 15px;
   text-align: center;
@@ -67,12 +67,12 @@
   align-items: center;
 }
 
-.popup p {
+.sentPopup p {
   font-size: 18px;
   margin: 0;
 }
 
-.popup button {
+.sentPopup button {
   background-color: transparent;
   border: none;
   color: white;
@@ -81,7 +81,41 @@
   padding: 0 10px;
 }
 
-.popup button:hover {
+.sentPopup button:hover {
+  text-decoration: underline;
+}
+
+.notSentPopup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #ff3333;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.notSentPopup p {
+  font-size: 18px;
+  margin: 0;
+}
+
+.notSentPopup button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 0 10px;
+}
+
+.notSentPopup button:hover {
   text-decoration: underline;
 }
 
