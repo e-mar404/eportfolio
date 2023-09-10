@@ -3,6 +3,122 @@
   margin: 2.5rem 0 0 2.5rem;
 }
 
+.inputContainer {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  color: white;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form elements */
+.element {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.nameInput[type="text"],
+.emailInput[type="email"],
+
+.messageInput {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+/* Submit button */
+.button[type="submit"] {
+  display: block;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.sentPopup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #00cc66;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sentPopup p {
+  font-size: 18px;
+  margin: 0;
+}
+
+.sentPopup button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 0 10px;
+}
+
+.sentPopup button:hover {
+  text-decoration: underline;
+}
+
+.notSentPopup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #ff3333;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.notSentPopup p {
+  font-size: 18px;
+  margin: 0;
+}
+
+.notSentPopup button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 0 10px;
+}
+
+.notSentPopup button:hover {
+  text-decoration: underline;
+}
+
 @media screen and (max-width: 600px){
   .title {
     padding-top: 7rem;
