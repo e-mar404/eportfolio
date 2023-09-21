@@ -15,7 +15,7 @@ export default function Navbar() {
                 <div className={styles.links_container}>
                     <a href='/' className={path == '/' ? styles.active_link : styles.inactive_link}>Home</a>
                     <a href='/about' className={path.startsWith('/about') ? styles.active_link : styles.inactive_link}>About</a>
-                    <a href='/journal' className={path.startsWith('/journal') ? styles.active_link : styles.inactive_link}>Journal</a>
+                    <a href='/career' className={path.startsWith('/career') ? styles.active_link : styles.inactive_link}>Career</a>
                     <a href='/contact-me' className={path.startsWith('/contact-me') ? styles.active_link : styles.inactive_link}>Contact Me</a>
                 </div>
                 <div className={styles.contacts_container}>
