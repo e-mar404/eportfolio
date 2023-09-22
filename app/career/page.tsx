@@ -4,14 +4,19 @@ import { Portfolio } from './Portfolio';
 export default function Home() {
     const Projects = [
         {
-            title: 'Project 1',
+            title: 'Beta Academy',
+            date: 'Oct 2021 - Present',
             description: 'Description of project 1',
-            date: 'Sep 01 - Nov 10',
         },
         {
-            title: 'Project 2',
+            title: 'Code Ninjas - Code Tutor',
+            date: 'Dec 2020 - Aug 2021',
             description: 'Description of project 2',
-            date: '',
+        },
+        {
+            title: 'Snipe IT Python CLI',
+            date: 'May 2023 - Jul 2023',
+            description: 'CLI tool that makes use of the API of a ',
         },
     ]
 
