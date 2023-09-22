@@ -1,0 +1,11 @@
+.project_item_container{
+    color: white;
+    margin: 2.5rem 0 0 2.5rem;
+}
+
+@media screen and (max-width: 600px){
+.title {
+    padding-top: 7rem;
+    margin: 0 0 0 2.5vh;
+}
+}
