@@ -1,26 +1,54 @@
 .background {
-  display: flex;
-  align-content: flex-start;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+.profile_container{
   justify-content: center;
+  display: flex;
   flex-direction: column;
-  align-items: flex-start;
   flex-wrap: wrap;
-  height: 80vh;
-  width: 50vw;
+  align-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255, 0.25);
+  border-radius: 2rem;
+  max-width: 30vw;
+  z-index: 100;
+  padding: 1rem;
+}
+
+.text_container{
+  margin: auto;
 }
 
 .title {
   color: white;
-  margin: 0 0 0 2.5rem;
+  font-size: xx-large;
+  margin: 1rem 0 0 1rem;
+  opacity: 1;
+  z-index: 101;
+}
+
+.text{
+  color: white;
+  margin: 1rem 1rem 0 1rem;
+  opacity: 1;
+  font-size: large;
+  z-index: 101;
+  text-align: justify;
+}
+
+.profile_pic{
+  height: 300px;
+  width: 250px;
+  border-radius: 10rem;
 }
 
 @media screen and (max-width: 600px){
   .title {
-    padding-top: 30px;
-    margin: 0 0 0 2.5vh;
-  }
-  .background {
-    justify-content: flex-end;
-    height: 85vh;
+    margin: 0 0 0 1rem;
   }
 }
