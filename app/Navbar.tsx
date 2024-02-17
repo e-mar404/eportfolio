@@ -19,7 +19,7 @@ export default function Navbar() {
                     <a href='/contact-me' className={path.startsWith('/contact-me') ? styles.active_link : styles.inactive_link}>Contact Me</a>
                 </div>
                 <div className={styles.contacts_container}>
-                    <a href='https://drive.google.com/file/d/1aQCzWZirNIiY9k8BpdFrPPX6Iy2GBGDj/view?usp=drive_link' download>
+                    <a href='https://drive.google.com/file/d/1aQCzWZirNIiY9k8BpdFrPPX6Iy2GBGDj/view?usp=drive_link' target='_blank'>
                         <Image className={styles.contact}
                             src={pdf_icon}
                             alt='Resume'
